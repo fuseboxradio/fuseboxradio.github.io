@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <style>
+    .flex-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box{
+width: 300px;
+height: 300px;
+border: 4px solid #000000;
+    margin: 20px;
+   padding: 10x;
+  background: #EF0000;
+}
+.box2{
+width: 300px;
+height: 300px;
+border: 4px dashed #FFE84F;
+    margin: 20px;
+   padding: 10x;
+  background: #0008EF;
+}
+.box3{
+width: 300px;
+height: 300px;
+border: 4px solid #FF61A0;
+    margin: 20px;
+   padding: 10x;
+  background: #78EF00;
+}
+.my-button{
+  width: 250px;
+  height: 100px;
+  margin: 20px;
+   padding: 10x;
+    background: #9C9C9C;
+}
+.my-button1{
+  width: 250px;
+  height: 100px;
+  margin: 20px;
+   padding: 10x;
+    background: #9C9C9C;
+}
+.my-button2{
+    width: 250px;
+  height: 100px;
+  margin: 20px;
+   padding: 10x;
+    background: #9C9C9C;
+}
+.my-button3{
+ width: 250px;
+  height: 100px;
+  margin: 20px;
+   padding: 10x;
+    background: #9C9C9C;
+}
+.my-button4{
+   width: 250px;
+  height: 100px;
+  margin: 20px;
+   padding: 10x;
+    background: #9C9C9C;
+}
+.my-button5{
+ width: 250px;
+  height: 100px;
+  margin: 10px;
+   padding: 10x;
+    background: #9C9C9C;
+}
+.my-button6{
+ width: 250px;
+  height: 100px;
+  margin: 20px;
+   padding: 10x;
+    background: #9C9C9C;
+}
+.my-button7{
+  width: 250px;
+  height: 100px;
+  margin: 20px;
+   padding: 10x;
+    background: #9C9C9C;
+}
+.my-button8{
+  width: 250px;
+  height: 100px;
+  margin: 20px;
+   padding: 10x;
+    background: #9C9C9C;
+}
+.my-button9{
+  width: 250px;
+  height: 100px;
+  margin: 20px;
+   padding: 10x;
+    background: #9C9C9C;
+}
+  </style>  
+  </head>
+    <body>
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 1px solid black;
+  }
+</style>
+</head>
+<body>
+  <center>
+    <u><b><font size="7">Week 0 Class Work</b></u></font><p><p><u><font color="#79E50C"><font size="5">Change Buttons</font></u></font>
+    
+    <div class="flex-parent">
+      <div class="box" id="box1"></div>
+      <div class="box" id="box2"></div>
+      <div class="box" id="box3"></div>
+    </div>
+    
+    <p><p>
+    
+    <button class="my-button" onclick="changeColor('box1')">Change Box 1</button>&nbsp; &nbsp;
+    <button class="my-button1" onclick="changeColor('box2')">Change Box 2</button>&nbsp; &nbsp;
+    <button class="my-button2" onclick="changeColor('box3')">Change Box 3</button>&nbsp; &nbsp;
+    <button class="my-button3" onclick="changeColor('all')">Change All</button>&nbsp; &nbsp; 
+
+    <u><font size="3"><font color="#E50C0C">Hide Buttons</u></font></font><p><p>
+    
+    <button class="my-button4" onclick="hideBox('box1')">Hide Box 1</button>&nbsp; &nbsp;
+    <button class="my-button5" onclick="hideBox('box2')">Hide Box 2</button>&nbsp; &nbsp;
+    <button class="my-button6" onclick="hideBox('box3')">Hide Box 3</button>&nbsp; &nbsp;
+    <button class="my-button7" onclick="hideAllBoxes()">Hide All</button>&nbsp; &nbsp;
+    
+    <p><p>
+    
+    <button class="my-button8" onclick="resetAll()">Reset Button</button>&nbsp; &nbsp;
+    <button class="my-button9" onclick="showAllBoxes()">Show All</button>&nbsp; &nbsp;   
+    
+    <script>
+      function changeColor(boxId) {
+        var box = document.getElementById(boxId);
+        var colors = ["red", "green", "blue", "yellow", "orange", "purple"];
+        var randomColor = colors[Math.floor(Math.random() * colors.length)];
+        box.style.backgroundColor = randomColor;
+
+        // Random border
+        var randomBorder = Math.floor(Math.random() * 10 + 1); // Random border width between 1 and 10
+        var randomBorderColor = colors[Math.floor(Math.random() * colors.length)]; // Random border color
+        box.style.borderWidth = randomBorder + "px";
+        box.style.borderColor = randomBorderColor;
+      }
+      
+      // ... (other functions as before)
+
+      function resetAll() {
+        var boxes = document.getElementsByClassName("box");
+        for (var i = 0; i < boxes.length; i++) {
+          boxes[i].style.backgroundColor = "";
+          boxes[i].style.borderWidth = "1px"; // Reset border width
+          boxes[i].style.borderColor = "black"; // Reset border color
+          boxes[i].style.display = "block";
+        }
+      }
+    </script>
+  </center>
+</body>
+</html>
