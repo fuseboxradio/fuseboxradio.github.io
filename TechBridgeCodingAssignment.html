@@ -2,6 +2,7 @@
 <html>
   <head>
   <style>
+  body {
     .flex-parent {
   display: flex;
   justify-content: center;
@@ -103,14 +104,14 @@ border: 4px solid #FF61A0;
 }
   </style>  
   </head>
-    <body>
-<style>
+  <style>
   .box {
     width: 100px;
     height: 100px;
     margin: 10px;
     border: 1px solid black;
   }
+    }
 </style>
 </head>
 <body>
@@ -156,7 +157,26 @@ border: 4px solid #FF61A0;
         box.style.borderColor = randomBorderColor;
       }
       
-      // ... (other functions as before)
+  
+
+      function hideBox(boxId) {
+        var box = document.getElementById(boxId);
+        box.style.display = "none";
+      }
+      
+      function hideAllBoxes() {
+        var boxes = document.getElementsByClassName("box");
+        for (var i = 0; i < boxes.length; i++) {
+          hideBox(boxes[i].id);
+        }
+      }
+
+      function showAllBoxes() {
+        var boxes = document.getElementsByClassName("box");
+        for (var i = 0; i < boxes.length; i++) {
+          boxes[i].style.display = "block";
+        }
+      }
 
       function resetAll() {
         var boxes = document.getElementsByClassName("box");
@@ -171,3 +191,6 @@ border: 4px solid #FF61A0;
   </center>
 </body>
 </html>
+
+
+
