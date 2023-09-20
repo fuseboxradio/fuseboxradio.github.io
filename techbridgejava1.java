@@ -1,6 +1,6 @@
-import java.util.Scanner; // importing the Scanner class to JAva
+import java.util.Scanner; // importing the Scanner class to Java
 
-class Main {
+public class Main {
   public static void main(String[] args) {
     Scanner myObj = new Scanner(System.in);
     String userName;
